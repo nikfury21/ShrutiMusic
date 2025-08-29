@@ -1,82 +1,118 @@
 # 🎵 Shruti Music Bot 🎵
 
-<!-- === Shruti Management Repo === -->
 <div align="center">
-  <svg width="100%" height="120" viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shruti Music Bot Equalizer">
-    <!-- Gradient glow -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 120" width="100%" height="120" role="img" aria-label="Equalizer">
     <defs>
-      <linearGradient id="eqGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%"  stop-color="#FF6B6B"/>
-        <stop offset="50%" stop-color="#9B59B6"/>
-        <stop offset="100%" stop-color="#4ECDC4"/>
+      <linearGradient id="g" x1="0" x2="1">
+        <stop offset="0" stop-color="#FF6B6B"/>
+        <stop offset="0.5" stop-color="#9B59B6"/>
+        <stop offset="1" stop-color="#4ECDC4"/>
       </linearGradient>
-      <filter id="softGlow">
-        <feGaussianBlur stdDeviation="3.5" result="blur"/>
-        <feMerge>
-          <feMergeNode in="blur"/>
-          <feMergeNode in="SourceGraphic"/>
-        </feMerge>
+      <filter id="blur">
+        <feGaussianBlur stdDeviation="2.5"/>
       </filter>
-      <style>
-        /* Animate up-down like DJ beat */
-        @keyframes bounce {
-          0%   { transform: scaleY(0.2); }
-          25%  { transform: scaleY(0.9); }
-          50%  { transform: scaleY(0.35); }
-          75%  { transform: scaleY(0.75); }
-          100% { transform: scaleY(0.2); }
-        }
-        .bar {
-          transform-origin: 50% 100%;
-          animation: bounce 1.2s infinite ease-in-out;
-        }
-        /* Make it look smooth on dark & light themes */
-        .baseline { opacity: .18 }
-      </style>
     </defs>
 
-    <!-- Faint baseline line -->
-    <rect class="baseline" x="0" y="100" width="600" height="2" fill="currentColor"/>
+    <!-- baseline -->
+    <rect x="0" y="102" width="620" height="2" fill="currentColor" opacity="0.12"/>
 
-    <!-- Bars (auto-spaced) -->
-    <!-- You can change BAR_COUNT by adding/removing <rect> elements. -->
-    <!-- Each bar has a slight delay so the wave looks organic. -->
-    <!-- Left half -->
-    <g filter="url(#softGlow)" fill="url(#eqGrad)">
-      <!-- 24 bars total; tweak height (h) & delay (anim-delay) for custom rhythm -->
-      <!-- spacing = 20px, bar width = 10px -->
-      <!-- indexes: -12 ... +11 (centered) -->
-      <!-- Left side -->
-      <rect class="bar" x="60"  y="20"  width="10" height="80" style="animation-delay:-0.00s"/>
-      <rect class="bar" x="80"  y="34"  width="10" height="66" style="animation-delay:-0.10s"/>
-      <rect class="bar" x="100" y="50"  width="10" height="50" style="animation-delay:-0.20s"/>
-      <rect class="bar" x="120" y="34"  width="10" height="66" style="animation-delay:-0.30s"/>
-      <rect class="bar" x="140" y="24"  width="10" height="76" style="animation-delay:-0.40s"/>
-      <rect class="bar" x="160" y="12"  width="10" height="88" style="animation-delay:-0.50s"/>
-      <rect class="bar" x="180" y="22"  width="10" height="78" style="animation-delay:-0.60s"/>
-      <rect class="bar" x="200" y="36"  width="10" height="64" style="animation-delay:-0.70s"/>
-      <rect class="bar" x="220" y="52"  width="10" height="48" style="animation-delay:-0.80s"/>
-      <rect class="bar" x="240" y="36"  width="10" height="64" style="animation-delay:-0.90s"/>
-      <rect class="bar" x="260" y="24"  width="10" height="76" style="animation-delay:-1.00s"/>
-      <rect class="bar" x="280" y="14"  width="10" height="86" style="animation-delay:-1.10s"/>
+    <g fill="url(#g)" filter="url(#blur)">
+      <!-- each bar uses SMIL animate on height and y for up-down motion -->
+      <!-- adjust x positions or add/remove <rect> to change count -->
+      <rect x="40"  y="20" width="12" height="80" rx="3">
+        <animate attributeName="height" values="16;92;30;70;16" dur="1.4s" repeatCount="indefinite" begin="0s"/>
+        <animate attributeName="y"      values="92;28;62;50;92" dur="1.4s" repeatCount="indefinite" begin="0s"/>
+      </rect>
 
-      <!-- Right side (mirror-ish, with slight variation so it feels live) -->
-      <rect class="bar" x="310" y="18"  width="10" height="82" style="animation-delay:-1.15s"/>
-      <rect class="bar" x="330" y="30"  width="10" height="70" style="animation-delay:-1.05s"/>
-      <rect class="bar" x="350" y="48"  width="10" height="52" style="animation-delay:-0.95s"/>
-      <rect class="bar" x="370" y="32"  width="10" height="68" style="animation-delay:-0.85s"/>
-      <rect class="bar" x="390" y="22"  width="10" height="78" style="animation-delay:-0.75s"/>
-      <rect class="bar" x="410" y="12"  width="10" height="88" style="animation-delay:-0.65s"/>
-      <rect class="bar" x="430" y="24"  width="10" height="76" style="animation-delay:-0.55s"/>
-      <rect class="bar" x="450" y="38"  width="10" height="62" style="animation-delay:-0.45s"/>
-      <rect class="bar" x="470" y="52"  width="10" height="48" style="animation-delay:-0.35s"/>
-      <rect class="bar" x="490" y="36"  width="10" height="64" style="animation-delay:-0.25s"/>
-      <rect class="bar" x="510" y="22"  width="10" height="78" style="animation-delay:-0.15s"/>
-      <rect class="bar" x="530" y="16"  width="10" height="84" style="animation-delay:-0.05s"/>
+      <rect x="70"  y="34" width="12" height="66" rx="3">
+        <animate attributeName="height" values="28;78;22;68;28" dur="1.38s" repeatCount="indefinite" begin="0.08s"/>
+        <animate attributeName="y"      values="78;42;70;52;78" dur="1.38s" repeatCount="indefinite" begin="0.08s"/>
+      </rect>
+
+      <rect x="100" y="50" width="12" height="50" rx="3">
+        <animate attributeName="height" values="12;86;36;54;12" dur="1.46s" repeatCount="indefinite" begin="0.16s"/>
+        <animate attributeName="y"      values="88;34;64;56;88" dur="1.46s" repeatCount="indefinite" begin="0.16s"/>
+      </rect>
+
+      <rect x="130" y="34" width="12" height="66" rx="3">
+        <animate attributeName="height" values="30;82;28;60;30" dur="1.32s" repeatCount="indefinite" begin="0.24s"/>
+        <animate attributeName="y"      values="72;28;64;52;72" dur="1.32s" repeatCount="indefinite" begin="0.24s"/>
+      </rect>
+
+      <rect x="160" y="20" width="12" height="80" rx="3">
+        <animate attributeName="height" values="18;90;40;66;18" dur="1.5s" repeatCount="indefinite" begin="0.30s"/>
+        <animate attributeName="y"      values="88;30;58;54;88" dur="1.5s" repeatCount="indefinite" begin="0.30s"/>
+      </rect>
+
+      <rect x="190" y="12" width="12" height="96" rx="3">
+        <animate attributeName="height" values="26;96;44;72;26" dur="1.36s" repeatCount="indefinite" begin="0.18s"/>
+        <animate attributeName="y"      values="86;24;58;48;86" dur="1.36s" repeatCount="indefinite" begin="0.18s"/>
+      </rect>
+
+      <rect x="220" y="24" width="12" height="76" rx="3">
+        <animate attributeName="height" values="22;80;30;68;22" dur="1.44s" repeatCount="indefinite" begin="0.10s"/>
+        <animate attributeName="y"      values="78;32;60;52;78" dur="1.44s" repeatCount="indefinite" begin="0.10s"/>
+      </rect>
+
+      <rect x="250" y="36" width="12" height="64" rx="3">
+        <animate attributeName="height" values="20;74;28;64;20" dur="1.28s" repeatCount="indefinite" begin="0.22s"/>
+        <animate attributeName="y"      values="74;40;62;56;74" dur="1.28s" repeatCount="indefinite" begin="0.22s"/>
+      </rect>
+
+      <rect x="280" y="14" width="12" height="86" rx="3">
+        <animate attributeName="height" values="30;92;36;70;30" dur="1.5s" repeatCount="indefinite" begin="0.02s"/>
+        <animate attributeName="y"      values="86;28;60;50;86" dur="1.5s" repeatCount="indefinite" begin="0.02s"/>
+      </rect>
+
+      <!-- right side mirrored with different timings -->
+      <rect x="330" y="18" width="12" height="82" rx="3">
+        <animate attributeName="height" values="18;90;34;68;18" dur="1.42s" repeatCount="indefinite" begin="0.12s"/>
+        <animate attributeName="y"      values="84;28;58;52;84" dur="1.42s" repeatCount="indefinite" begin="0.12s"/>
+      </rect>
+
+      <rect x="360" y="30" width="12" height="70" rx="3">
+        <animate attributeName="height" values="24;80;30;66;24" dur="1.34s" repeatCount="indefinite" begin="0.20s"/>
+        <animate attributeName="y"      values="76;36;60;54;76" dur="1.34s" repeatCount="indefinite" begin="0.20s"/>
+      </rect>
+
+      <rect x="390" y="48" width="12" height="52" rx="3">
+        <animate attributeName="height" values="16;72;28;60;16" dur="1.38s" repeatCount="indefinite" begin="0.28s"/>
+        <animate attributeName="y"      values="76;36;60;54;76" dur="1.38s" repeatCount="indefinite" begin="0.28s"/>
+      </rect>
+
+      <rect x="420" y="32" width="12" height="68" rx="3">
+        <animate attributeName="height" values="20;84;34;64;20" dur="1.46s" repeatCount="indefinite" begin="0.04s"/>
+        <animate attributeName="y"      values="84;28;56;52;84" dur="1.46s" repeatCount="indefinite" begin="0.04s"/>
+      </rect>
+
+      <rect x="450" y="22" width="12" height="78" rx="3">
+        <animate attributeName="height" values="22;88;40;70;22" dur="1.40s" repeatCount="indefinite" begin="0.16s"/>
+        <animate attributeName="y"      values="86;24;58;50;86" dur="1.40s" repeatCount="indefinite" begin="0.16s"/>
+      </rect>
+
+      <rect x="480" y="12" width="12" height="96" rx="3">
+        <animate attributeName="height" values="26;96;46;74;26" dur="1.30s" repeatCount="indefinite" begin="0.26s"/>
+        <animate attributeName="y"      values="86;20;54;48;86" dur="1.30s" repeatCount="indefinite" begin="0.26s"/>
+      </rect>
+
+      <rect x="510" y="24" width="12" height="76" rx="3">
+        <animate attributeName="height" values="20;78;32;66;20" dur="1.36s" repeatCount="indefinite" begin="0.06s"/>
+        <animate attributeName="y"      values="78;34;60;52;78" dur="1.36s" repeatCount="indefinite" begin="0.06s"/>
+      </rect>
+
+      <rect x="540" y="38" width="12" height="62" rx="3">
+        <animate attributeName="height" values="18;76;30;64;18" dur="1.44s" repeatCount="indefinite" begin="0.14s"/>
+        <animate attributeName="y"      values="74;40;60;56;74" dur="1.44s" repeatCount="indefinite" begin="0.14s"/>
+      </rect>
+
+      <rect x="570" y="52" width="12" height="48" rx="3">
+        <animate attributeName="height" values="12;70;26;60;12" dur="1.48s" repeatCount="indefinite" begin="0.22s"/>
+        <animate attributeName="y"      values="76;34;62;54;76" dur="1.48s" repeatCount="indefinite" begin="0.22s"/>
+      </rect>
     </g>
   </svg>
 </div>
-<!-- === /Musuc Mangement Repo === -->
+
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/NoxxOP/ShrutiMusic/main/ShrutiMusic/assets/ShrutiBots.jpg" alt="ShrutiMusicBot Logo" width="500px">
