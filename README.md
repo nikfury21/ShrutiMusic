@@ -1,12 +1,7 @@
-# 🎵 Shruti Music Bot 🎵
-
 <p align="center">
   <img src="ShrutiMusic/assets/equalizer.svg" width="100%" height="500">
 </p>
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/NoxxOP/ShrutiMusic/main/ShrutiMusic/assets/ShrutiBots.jpg" alt="ShrutiMusicBot Logo" width="500px">
-  
   <h1>🎵 Shruti Music Bot 🎵</h1>
   
   <p><b>A Powerful Telegram Music Bot to Play Songs in Voice Chats</b></p>
