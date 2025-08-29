@@ -1,23 +1,176 @@
-<svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- Gradient Background -->
+<svg width="100%" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#6a11cb;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#2575fc;stop-opacity:1" />
+    <!-- Neon glow gradient -->
+    <radialGradient id="neonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF00FF" stop-opacity="1"/>
+      <stop offset="30%" stop-color="#00FFFF" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#FFD700" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FF1493" stop-opacity="0.4"/>
+    </radialGradient>
+    
+    <!-- Cosmic gradient -->
+    <linearGradient id="cosmicGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B35"/>
+      <stop offset="25%" stop-color="#F7931E"/>
+      <stop offset="50%" stop-color="#FFD23F"/>
+      <stop offset="75%" stop-color="#06FFA5"/>
+      <stop offset="100%" stop-color="#B535F6"/>
     </linearGradient>
+    
+    <!-- Pulsing glow effect -->
+    <filter id="ultraGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Wave pattern -->
+    <pattern id="wavePattern" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <path d="M0,10 Q10,0 20,10 T40,10" stroke="#00FFFF" stroke-width="1" fill="none" opacity="0.3"/>
+    </pattern>
+    
+    <style>
+      @keyframes pulse {
+        0%   { transform: scaleY(0.3); opacity: 0.7; }
+        15%  { transform: scaleY(1.2); opacity: 1; }
+        30%  { transform: scaleY(0.6); opacity: 0.8; }
+        45%  { transform: scaleY(1.5); opacity: 1; }
+        60%  { transform: scaleY(0.4); opacity: 0.7; }
+        75%  { transform: scaleY(1.8); opacity: 1; }
+        90%  { transform: scaleY(0.7); opacity: 0.9; }
+        100% { transform: scaleY(0.3); opacity: 0.7; }
+      }
+      
+      @keyframes wave {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-40px); }
+      }
+      
+      @keyframes rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      @keyframes textFlow {
+        0% { 
+          transform: scale(1); 
+          filter: hue-rotate(0deg); 
+        }
+        50% { 
+          transform: scale(1.1); 
+          filter: hue-rotate(180deg); 
+        }
+        100% { 
+          transform: scale(1); 
+          filter: hue-rotate(360deg); 
+        }
+      }
+      
+      @keyframes noteFloat {
+        0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+        50% { transform: translateY(-10px) rotate(180deg); opacity: 1; }
+        100% { transform: translateY(0) rotate(360deg); opacity: 0.8; }
+      }
+      
+      .bar {
+        transform-origin: 50% 100%;
+        animation: pulse 0.8s infinite ease-in-out;
+        border-radius: 6px 6px 0 0;
+      }
+      
+      .wave-bg {
+        animation: wave 3s linear infinite;
+      }
+      
+      .spinning {
+        animation: rotate 4s linear infinite;
+      }
+      
+      .center-circle {
+        animation: textFlow 3s infinite ease-in-out;
+        transform-origin: center;
+      }
+      
+      .floating-notes {
+        animation: noteFloat 4s infinite ease-in-out;
+      }
+    </style>
   </defs>
   
-  <!-- Rounded Color Box -->
-  <rect x="5" y="5" rx="20" ry="20" width="390" height="110" fill="url(#grad)" stroke="#fff" stroke-width="3"/>
+  <!-- Background with moving waves -->
+  <rect width="100%" height="100%" fill="#0a0a0a"/>
+  <rect class="wave-bg" width="120%" height="100%" fill="url(#wavePattern)"/>
   
-  <!-- Glow Border -->
-  <rect x="5" y="5" rx="20" ry="20" width="390" height="110" fill="none" stroke="white" stroke-width="3">
-    <animate attributeName="stroke-dasharray" values="20,600;600,20" dur="4s" repeatCount="indefinite"/>
-  </rect>
+  <!-- Main equalizer bars with enhanced effects -->
+  <g filter="url(#ultraGlow)">
+    <!-- Left side bars -->
+    <rect class="bar" x="50" y="80" width="12" height="140" fill="url(#neonGlow)" rx="6" style="animation-delay: 0s"/>
+    <rect class="bar" x="70" y="100" width="12" height="100" fill="url(#cosmicGrad)" rx="6" style="animation-delay: 0.1s"/>
+    <rect class="bar" x="90" y="60" width="12" height="180" fill="url(#neonGlow)" rx="6" style="animation-delay: 0.2s"/>
+    <rect class="bar" x="110" y="90" width="12" height="120" fill="url(#cosmicGrad)" rx="6" style="animation-delay: 0.3s"/>
+    <rect class="bar" x="130" y="45" width="12" height="210" fill="url(#neonGlow)" rx="6" style="animation-delay: 0.4s"/>
+    <rect class="bar" x="150" y="75" width="12" height="150" fill="url(#cosmicGrad)" rx="6" style="animation-delay: 0.5s"/>
+    <rect class="bar" x="170" y="35" width="12" height="230" fill="url(#neonGlow)" rx="6" style="animation-delay: 0.6s"/>
+    <rect class="bar" x="190" y="85" width="12" height="130" fill="url(#cosmicGrad)" rx="6" style="animation-delay: 0.7s"/>
+    <rect class="bar" x="210" y="55" width="12" height="190" fill="url(#neonGlow)" rx="6" style="animation-delay: 0.8s"/>
+    <rect class="bar" x="230" y="95" width="12" height="110" fill="url(#cosmicGrad)" rx="6" style="animation-delay: 0.9s"/>
+    
+    <!-- Center text with flowing effects -->
+    <g transform="translate(400, 150)">
+      <!-- Background glow for text -->
+      <circle r="80" fill="url(#neonGlow)" opacity="0.2" class="center-circle"/>
+      <circle r="60" fill="none" stroke="url(#cosmicGrad)" stroke-width="2" opacity="0.6" class="spinning"/>
+      
+      <!-- Main text -->
+      <text x="0" y="-5" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" 
+            fill="url(#cosmicGrad)" filter="url(#ultraGlow)" class="center-circle">
+        ShrutiMusic
+      </text>
+      
+      <!-- Flowing underline -->
+      <path d="M-70,15 Q-35,25 0,15 T70,15" stroke="url(#neonGlow)" stroke-width="3" 
+            fill="none" opacity="0.8" class="center-circle"/>
+      
+      <!-- Music notes floating around -->
+      <g class="spinning" style="animation-duration: 8s;">
+        <text x="50" y="-30" font-size="20" fill="#00FFFF" opacity="0.8">♪</text>
+        <text x="-50" y="40" font-size="16" fill="#FF00FF" opacity="0.7">♫</text>
+        <text x="60" y="35" font-size="18" fill="#FFD700" opacity="0.9">♪</text>
+        <text x="-60" y="-25" font-size="14" fill="#00FF00" opacity="0.6">♫</text>
+      </g>
+    </g>
+    
+    <!-- Right side bars -->
+    <rect class="bar" x="550" y="95" width="12" height="110" fill="url(#cosmicGrad)" rx="6" style="animation-delay: 1.1s"/>
+    <rect class="bar" x="570" y="55" width="12" height="190" fill="url(#neonGlow)" rx="6" style="animation-delay: 1.2s"/>
+    <rect class="bar" x="590" y="85" width="12" height="130" fill="url(#cosmicGrad)" rx="6" style="animation-delay: 1.3s"/>
+    <rect class="bar" x="610" y="35" width="12" height="230" fill="url(#neonGlow)" rx="6" style="animation-delay: 1.4s"/>
+    <rect class="bar" x="630" y="75" width="12" height="150" fill="url(#cosmicGrad)" rx="6" style="animation-delay: 1.5s"/>
+    <rect class="bar" x="650" y="45" width="12" height="210" fill="url(#neonGlow)" rx="6" style="animation-delay: 1.6s"/>
+    <rect class="bar" x="670" y="90" width="12" height="120" fill="url(#cosmicGrad)" rx="6" style="animation-delay: 1.7s"/>
+    <rect class="bar" x="690" y="60" width="12" height="180" fill="url(#neonGlow)" rx="6" style="animation-delay: 1.8s"/>
+    <rect class="bar" x="710" y="100" width="12" height="100" fill="url(#cosmicGrad)" rx="6" style="animation-delay: 1.9s"/>
+    <rect class="bar" x="730" y="80" width="12" height="140" fill="url(#neonGlow)" rx="6" style="animation-delay: 2s"/>
+  </g>
   
-  <!-- Text -->
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" 
-        font-size="28" font-weight="bold" fill="white" font-family="Poppins, Arial">
-    Shruti Music Bot
-  </text>
+  <!-- Floating particles -->
+  <g filter="url(#ultraGlow)">
+    <circle class="center-circle" cx="100" cy="50" r="3" fill="#00FFFF" style="animation-delay: 0s"/>
+    <circle class="center-circle" cx="200" cy="30" r="2" fill="#FF00FF" style="animation-delay: 0.5s"/>
+    <circle class="center-circle" cx="600" cy="40" r="3" fill="#FFD700" style="animation-delay: 1s"/>
+    <circle class="center-circle" cx="700" cy="60" r="2" fill="#00FF00" style="animation-delay: 1.5s"/>
+  </g>
+  
+  <!-- Bottom reflection effect -->
+  <defs>
+    <linearGradient id="reflection" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="250" width="100%" height="50" fill="url(#reflection)"/>
+  
 </svg>
