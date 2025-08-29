@@ -1,50 +1,37 @@
 # 🎵 Shruti Music Bot 🎵
 
 <div align="center">
-  
-  <!-- Animated Musical Notes -->
-  <h1>
-    🎵🎶🎵🎶🎵🎶🎵🎶🎵🎶🎵🎶🎵🎶🎵
-    <br>
-    ♪♫♪ 🎤 SHRUTI MUSIC BOT 🎤 ♪♫♪
-    <br>
-    🎵🎶🎵🎶🎵🎶🎵🎶🎵🎶🎵🎶🎵🎶🎵
-  </h1>
-  
   <img src="https://raw.githubusercontent.com/NoxxOP/ShrutiMusic/main/ShrutiMusic/assets/ShrutiBots.jpg" alt="ShrutiMusicBot Logo" width="500px">
   
-  <!-- Animated Wave Effect -->
-  <h2>🌊🎵 ～～～ A Powerful Telegram Music Bot to Play Songs in Voice Chats ～～～ 🎵🌊</h2>
+  <h1>🎵 Shruti Music Bot 🎵</h1>
   
-  <!-- Bold Colorful Support Badges -->
+  <p><b>A Powerful Telegram Music Bot to Play Songs in Voice Chats</b></p>
+  
+  <!-- Bold and vibrant badges with striking combinations -->
   <p>
     <a href="https://t.me/ShrutiBots">
-      <img src="https://img.shields.io/badge/🔥%20Support%20Channel%20🔥-FF0000?style=for-the-badge&logo=telegram&logoColor=white" alt="Support Channel">
+      <img src="https://img.shields.io/badge/Support%20Channel-FF0000?style=for-the-badge&logo=telegram&logoColor=white&labelColor=000000" alt="Support Channel">
     </a>
     <a href="https://t.me/ShrutiBotSupport">
-      <img src="https://img.shields.io/badge/💬%20Support%20Group%20💬-00FF00?style=for-the-badge&logo=telegram&logoColor=white" alt="Support Group">
+      <img src="https://img.shields.io/badge/Support%20Group-00FF00?style=for-the-badge&logo=telegram&logoColor=black&labelColor=FF0000" alt="Support Group">
     </a>
     <a href="https://t.me/WTF_WhyMeeh">
-      <img src="https://img.shields.io/badge/👑%20Owner%20👑-FF00FF?style=for-the-badge&logo=telegram&logoColor=white" alt="Owner">
+      <img src="https://img.shields.io/badge/Owner-FFFF00?style=for-the-badge&logo=telegram&logoColor=black&labelColor=8A2BE2" alt="Owner">
     </a>
   </p>
   
-  <!-- GitHub Stats with Bold Colors -->
+  <!-- Bold social stats with high contrast -->
   <p>
     <a href="https://github.com/NoxxOP/ShrutiMusic/fork">
-      <img src="https://img.shields.io/github/forks/NoxxOP/ShrutiMusic?style=for-the-badge&logo=github&logoColor=white&color=FF4500&labelColor=000000" alt="GitHub Forks">
+      <img src="https://img.shields.io/github/forks/NoxxOP/ShrutiMusic?style=social&logo=github&labelColor=FF1493&color=00CED1" alt="GitHub Forks">
     </a>
     <a href="https://github.com/NoxxOP/ShrutiMusic/stargazers">
-      <img src="https://img.shields.io/github/stars/NoxxOP/ShrutiMusic?style=for-the-badge&logo=github&logoColor=white&color=FFD700&labelColor=000000" alt="GitHub Stars">
+      <img src="https://img.shields.io/github/stars/NoxxOP/ShrutiMusic?style=social&logo=github&labelColor=FF4500&color=32CD32" alt="GitHub Stars">
     </a>
     <a href="https://github.com/NoxxOP/ShrutiMusic/graphs/contributors">
-      <img src="https://img.shields.io/github/contributors/NoxxOP/ShrutiMusic?style=for-the-badge&logo=github&logoColor=white&color=00BFFF&labelColor=000000" alt="GitHub Contributors">
+      <img src="https://img.shields.io/github/contributors/NoxxOP/ShrutiMusic?style=social&logo=github&labelColor=DC143C&color=FFD700" alt="GitHub Contributors">
     </a>
   </p>
-  
-  <!-- Music Animation Effect -->
-  <h3>🎧🎪🎭🎨🎺🎸🥁🎹🎻🎼🎵🎶🎤🔊📻🎧</h3>
-  
 </div>
 
 ---
@@ -53,27 +40,21 @@
 
 <div align="center">
   
-  <!-- Large Heroku Deploy Button -->
-  <h2>🔥 Deploy to Heroku 🔥</h2>
+  ### 🔥 Deploy to Heroku
   <a href="https://dashboard.heroku.com/new?template=https://github.com/NoxxOP/ShrutiMusic">
-    <img src="https://img.shields.io/badge/🚀%20DEPLOY%20TO%20HEROKU%20🚀-8A2BE2?style=for-the-badge&logo=heroku&logoColor=white&labelColor=000000" width="400px" height="80px" alt="Deploy to Heroku">
+    <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-FF0080?style=for-the-badge&logo=heroku&logoColor=white&labelColor=000080" width="280px" alt="Deploy to Heroku">
   </a>
   
-  <h2>☁️ Deploy to Render (Free) ☁️</h2>
+  ### ☁️ Deploy to Render (Free)
   <a href="https://render.com/deploy?repo=https://github.com/NoxxOP/ShrutiMusic">
-    <img src="https://img.shields.io/badge/☁️%20DEPLOY%20TO%20RENDER%20☁️-00CED1?style=for-the-badge&logo=render&logoColor=white&labelColor=000000" width="400px" height="60px" alt="Deploy to Render">
+    <img src="https://img.shields.io/badge/Deploy%20To%20Render-00FF80?style=for-the-badge&logo=render&logoColor=black&labelColor=800080" width="280px" alt="Deploy to Render">
   </a>
   
-  <h2>🎵 Simple Music Bot 🎵</h2>
+  ### 🎵 Simple Music Bot
   <a href="https://github.com/NoxxOP/ShrutixMusic">
-    <img src="https://img.shields.io/badge/🎶%20SIMPLE%20MUSIC%20BOT%20🎶-FF1493?style=for-the-badge&logo=github&logoColor=white&labelColor=000000" width="400px" height="60px" alt="Simple Music Bot">
+    <img src="https://img.shields.io/badge/Simple%20Music%20Bot-FF4000?style=for-the-badge&logo=github&logoColor=white&labelColor=008000" width="280px" alt="Simple Music Bot">
   </a>
   
-</div>
-
-<!-- Sound Wave Animation -->
-<div align="center">
-  <h3>🌊～～～～🎵～～～～🎶～～～～🎵～～～～🎶～～～～🌊</h3>
 </div>
 
 ---
@@ -97,12 +78,12 @@
 ## 📊 Repository Stats
 
 <div align="center">
-  <img src="https://img.shields.io/github/repo-size/NoxxOP/ShrutiMusic?style=for-the-badge&logo=github&color=FF6347&labelColor=000000" alt="Repo Size">
-  <img src="https://img.shields.io/github/issues/NoxxOP/ShrutiMusic?style=for-the-badge&logo=github&color=32CD32&labelColor=000000" alt="Issues">
-  <img src="https://img.shields.io/github/forks/NoxxOP/ShrutiMusic?style=for-the-badge&logo=github&color=FF69B4&labelColor=000000" alt="Forks">
-  <img src="https://img.shields.io/github/stars/NoxxOP/ShrutiMusic?style=for-the-badge&logo=github&color=FFD700&labelColor=000000" alt="Stars">
-  <img src="https://img.shields.io/github/license/NoxxOP/ShrutiMusic?style=for-the-badge&logo=github&color=00FFFF&labelColor=000000" alt="LICENSE">
-  <img src="https://img.shields.io/github/last-commit/NoxxOP/ShrutiMusic?style=for-the-badge&logo=github&color=FF4500&labelColor=000000" alt="Last Commit">
+  <img src="https://img.shields.io/github/repo-size/NoxxOP/ShrutiMusic?style=flat-square&logo=github&color=FF1493&labelColor=000080" alt="Repo Size">
+  <img src="https://img.shields.io/github/issues/NoxxOP/ShrutiMusic?style=flat-square&logo=github&color=FF4500&labelColor=008B8B" alt="Issues">
+  <img src="https://img.shields.io/github/forks/NoxxOP/ShrutiMusic?style=flat-square&logo=github&color=32CD32&labelColor=8B0000" alt="Forks">
+  <img src="https://img.shields.io/github/stars/NoxxOP/ShrutiMusic?style=flat-square&logo=github&color=FFD700&labelColor=4B0082" alt="Stars">
+  <img src="https://img.shields.io/github/license/NoxxOP/ShrutiMusic?style=flat-square&logo=github&color=00CED1&labelColor=DC143C" alt="LICENSE">
+  <img src="https://img.shields.io/github/last-commit/NoxxOP/ShrutiMusic?style=flat-square&logo=github&color=FF6347&labelColor=2F4F4F" alt="Last Commit">
 </div>
 
 ---
@@ -254,7 +235,7 @@ Example : `screen -r 108108`
 
 <div align="center">
   <a href="https://dashboard.heroku.com/new?template=https://github.com/NoxxOP/ShrutiMusic">
-    <img src="https://img.shields.io/badge/🚀%20DEPLOY%20TO%20HEROKU%20🚀-8A2BE2?style=for-the-badge&logo=heroku&logoColor=white&labelColor=000000" width="350px" height="70px" alt="Deploy to Heroku">
+    <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-FF0080?style=for-the-badge&logo=heroku&logoColor=white&labelColor=000080" width="250px" alt="Deploy to Heroku">
   </a>
 </div>
 
@@ -327,15 +308,15 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 **For any questions or help, join our Support Group**
 
 <a href="https://t.me/ShrutiBotSupport">
-  <img src="https://img.shields.io/badge/💬%20JOIN%20SUPPORT%20GROUP%20💬-DC143C?style=for-the-badge&logo=telegram&logoColor=white&labelColor=000000" width="350px" alt="Support Group">
+  <img src="https://img.shields.io/badge/Join%20Support%20Group-FF0040?style=for-the-badge&logo=telegram&logoColor=white&labelColor=0080FF" alt="Support Group">
 </a>
 
 ---
 
-<img src="https://img.shields.io/badge/Made%20with%20%E2%9D%A4%EF%B8%8F%20by-NoxxOP-FF1493?style=for-the-badge&logo=heart&labelColor=000000" alt="Made with love">
+<img src="https://img.shields.io/badge/Made%20with%20%E2%9D%A4%EF%B8%8F%20by-NoxxOP-FF1493?style=for-the-badge&logo=heart&labelColor=000080" alt="Made with love">
 
-<!-- Final Music Animation -->
-<h2>🎵🎶🎵🎶 Enjoy Streaming Music with Shruti Bot! 🎶🎵🎶🎵</h2>
-<h3>🔥🎤🎧🎸🥁🎹🎻🎺🎪🎭🎨🔥</h3>
+---
+
+**🎵 Enjoy Streaming Music with Shruti Bot! 🎵**
 
 </div>
