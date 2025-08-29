@@ -1,7 +1,7 @@
 # 🎵 Shruti Music Bot 🎵
 
 <p align="center">
-  <img src="ShrutiMusic/assets/equalizer.svg" width="100%" height="120">
+  <img src="ShrutiMusic/assets/equalizer.svg" width="100%" height="130">
 </p>
 
 <div align="center">
